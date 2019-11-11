@@ -1,0 +1,38 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+public class TextScript : MonoBehaviour
+{
+    public Text ScriptTxt;
+    // Start is called before the first frame update
+
+    int tea = 0; //tea value Settings
+
+    void Start()
+    {
+        ScriptTxt.text = "0";
+    }
+
+    // Update is called once per frame
+    public void TeaPlus()
+    {
+        tea += 1;
+        ScriptTxt.text = tea.ToString();
+    }
+
+    void Update()
+    {
+        if (tea == 6)
+        {
+            SceneManager.LoadScene("clear");
+        }
+    }
+}
+
+
+
+
+//일부 코드 참고한 곳 : https://chameleonstudio.tistory.com/17?category=1035882
