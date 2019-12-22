@@ -1,0 +1,93 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+//클릭하면 이미지 
+public class KimchiEvent : MonoBehaviour
+{
+
+    public GameObject Success;
+    public RawImage[] image;
+    
+    //public ParticleSystem particle;
+    public AudioClip audios;
+    private AudioSource audioSource;
+    int MouseClickCount = 0;
+
+
+
+   
+    
+    public void ButtonEvent()
+    {
+        if (MouseClickCount == 10)
+        {
+            image[1].enabled = true;
+            image[0].enabled = false;
+        }
+        if(MouseClickCount == 20)
+        {
+            image[2].enabled = true;
+            image[1].enabled = false;
+        }
+        if(MouseClickCount == 30)
+        {
+            image[3].enabled = true;
+            image[2].enabled = false;
+        }
+        if(MouseClickCount == 40)
+        {
+            image[4].enabled = true;
+            image[3].enabled = false;
+        }
+        if(MouseClickCount == 50)
+        {
+            
+            image[5].enabled = true;
+            image[4].enabled = false;
+        }
+        if(MouseClickCount == 60)
+        {
+            Success.gameObject.SetActive(true);
+        }
+        
+
+    }
+
+    //particle.Play();
+    //audioSource.clip = audios;
+    //audioSource.Play();
+
+    //MouseClickCount++;
+    // particle.Play();
+    //audioSource.clip = audios;
+    //audioSource.Play();
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        Success.gameObject.SetActive(false);
+        image[0].enabled = true;
+        image[1].enabled = false;
+        image[2].enabled = false;
+        image[3].enabled = false;
+        image[4].enabled = false;
+        image[5].enabled = false;
+        audioSource = GetComponent<AudioSource>();
+        audioSource.Stop();
+        //particle.Pause();
+        
+    }
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            MouseClickCount++;
+            audioSource.clip = audios;
+            audioSource.Play();
+        }
+
+    }
+
+   
+}
