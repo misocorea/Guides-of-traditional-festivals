@@ -1,0 +1,39 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PreviewCanvas : MonoBehaviour
+{
+    public Canvas[] preview;
+    public Canvas first;
+
+    public void preview1()
+    {
+        first.gameObject.SetActive(false);
+        preview[0].gameObject.SetActive(true);
+    }
+    
+    public void preview2()
+    {
+        first.gameObject.SetActive(false);
+        preview[1].gameObject.SetActive(true);
+    }
+
+    public void preview3()
+    {
+        first.gameObject.SetActive(false);
+        preview[2].gameObject.SetActive(true);
+    }
+
+    public void preview4()
+    {
+        first.gameObject.SetActive(false);
+        preview[3].gameObject.SetActive(true);
+    }
+
+    public void preview5()
+    {
+        first.gameObject.SetActive(false);
+        preview[4].gameObject.SetActive(true);
+    }
+}
