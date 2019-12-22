@@ -1,0 +1,35 @@
+// jiyeong 's game script
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class InsCanvas : MonoBehaviour
+{
+
+    public Canvas KimchiContest;
+    public Canvas KoryuKimchi;
+    public Canvas KimchiBump;
+    public Canvas Instructions;
+
+    public void nextUI1()
+    {
+        Instructions.gameObject.SetActive(false);
+        KimchiContest.gameObject.SetActive(true);
+    }
+
+    public void nextUI2()
+    {
+        Instructions.gameObject.SetActive(false);
+        KoryuKimchi.gameObject.SetActive(true);
+    }
+
+    public void nextUI3()
+    {
+        Instructions.gameObject.SetActive(false);
+        KimchiBump.gameObject.SetActive(true);
+    }
+    
+   
+  
+}
