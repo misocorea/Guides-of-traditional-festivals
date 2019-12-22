@@ -1,0 +1,23 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class map_btn : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    public void mapbtn()
+    {
+        Application.OpenURL("https://map.kakao.com/?map_type=TYPE_MAP&from=roughmap&srcid=10919234&itemId=10919234&q=%ED%95%A8%ED%8F%89%EC%97%91%EC%8A%A4%ED%8F%AC%EA%B3%B5%EC%9B%90&urlX=390548.0&urlY=433642.0");
+    }//버튼을 누르면 해당 사이트로 이동합니다.
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
